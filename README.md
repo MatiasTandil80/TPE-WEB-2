@@ -1,7 +1,7 @@
 # TPE-WEB-2
 
-Belaunzaran, Sergio Pablo
-Suarez, Matias Sebastian
+Belaunzaran, Sergio Pablo (sergiobelaunzaran@gmail.com ) 
+Suarez, Matias Sebastian (matiastandil80@gmail.com)
 
 -Base de Datos de Marcas y Modelos de motos.
 
