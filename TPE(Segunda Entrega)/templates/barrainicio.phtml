@@ -1,0 +1,16 @@
+            <header>    
+                <nav  class="barra">
+                <?php session_start();?>    
+                <?php if (!isset($_SESSION['MAIL'])) : ?>     
+                  <p class="login"><a href="login">Login</a></p>    
+                <?php else : ?>
+                  <p class="login"><a href="logout">Logout</a></p>
+                <?php endif ?>  
+                    <ul class="botones">
+                        <li><a href="marcas">Marcas</a></li>
+                        <li><a href="modelos">Modelos</a></li>
+                        <li><a href="about">About</a></li>
+                        
+                    </ul>
+                </nav>
+            </header>

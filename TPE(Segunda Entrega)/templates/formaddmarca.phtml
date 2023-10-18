@@ -1,0 +1,26 @@
+    <?php require ("templates/cabecera.phtml")?>
+    <?php require ("templates/barra.phtml")?>
+
+
+   <form action="form-add-marca" method="post" id="form-carga-marcas">
+        <label for="">Nombre:</label>
+        <input type="text" name="nombre"  value="" id="input-nombre-marca">
+
+        <label for="">Origen:</label>
+        <input type="text" name="origen" value="" id="input-origen">
+
+        <label>Año Fundación:</label>
+        <input type="number" name="año_fundacion" value="" id="input-año">
+
+        <label>Cant Empleados:</label>
+        <input type="number" name="cant_empleados" value="" id="input-cant-empleados">
+        
+        <label>Produccion Anual:</label>
+        <input type="number" name="produccion_anual" value="" id="input-prod-anual">
+
+        <label>Facturacion Anual USD:</label>
+        <input type="number" name="facturacion_M_USD" value="" id="input-fact-anual">
+
+        <input type="submit" value="Añadir Marca" id="btn-marcas">
+    </form>
+

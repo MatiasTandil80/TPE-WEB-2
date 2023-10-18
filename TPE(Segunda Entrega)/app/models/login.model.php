@@ -1,0 +1,17 @@
+<?php
+
+class loginModel {
+    private $db;
+
+    function __construct() {
+        $this->db = new PDO('mysql:host=localhost;dbname=motos;charset=utf8', 'root', '');
+    }
+
+    public function getByEmail($email) {
+        $query = $this->db->prepare('SELECT * FROM usuarios WHERE mail = ?');
+        $query->execute([$email]);
+
+        return $query->fetch(PDO::FETCH_OBJ);
+
+    }
+}

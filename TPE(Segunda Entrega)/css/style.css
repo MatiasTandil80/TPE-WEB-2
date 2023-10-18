@@ -1,0 +1,208 @@
+html{
+    margin: 0;
+    font-family: 'Trebuchet MS';
+    color: white;
+    background-image: url('../images/portada.jpg');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+}
+
+html::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.5); /* Cambia el último valor (0.5) para ajustar la opacidad */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.barra, .botones{
+    display: flex;
+    flex-direction: row;
+    font-size: large;
+}
+
+.login a:hover, .botones li a:hover {
+    color: grey; 
+}
+
+.barra{
+    justify-content: space-between;
+    height: 8vh;
+    align-items: center;
+}
+.botones li{
+    list-style: none;
+    margin-right: 2vw;
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.login{
+    margin-left: 2vw;
+}
+.linea{
+    width: 13vw;
+    border-color: grey;
+}
+.titulo-central{
+    width: fit-content; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    
+}
+
+.subtitulo-superior, .subtitulo-inferior{
+    width: fit-content;
+    height: fit-content;
+}
+
+.subtitulo-superior{
+    font-size: 4vw;
+    margin-bottom: 2vh;
+    font-family: sans-serif;
+}
+
+.subtitulo-inferior{
+    font-size: 1.2vw;
+    margin-top: 2vh;
+}
+
+#btn-login, #btn-modelos, #btn-marcas, .btn-modif, .btn-borrar, .btn-mostrar, .btn-agregar{
+  background-color: #2a8079; /* Color de fondo primario de Bootstrap */
+  color: #fff; /* Color de texto */
+  border: none;
+  border-radius: 4px; /* Redondea los bordes */
+  padding: 10px 20px; /* Añade relleno */
+  margin-right: 1vw;
+  margin-left: 1vw;
+  margin-top: 1vh;
+  height: fit-content;
+}
+
+.btn-agregar{
+    width: fit-content;
+    margin-left: 1vw;
+    display: block;
+    margin-top: 3vh;
+}
+
+.a-mostrar:hover{
+    background-color:rgb(64, 94, 104);
+}
+
+.a-mostrar{
+    border: none;
+  border-radius: 4px; /* Redondea los bordes */
+  padding: 10px 20px; /* Añade relleno */
+  margin-right: 1vw;
+  margin-left: 1vw;
+  margin-top: 1vh;
+}
+
+#form-login, #form-carga-modelos, #form-carga-marcas{
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+    margin-left: 5vw;
+    border: 2px solid #ffffff; /* Establece un borde blanco */
+    border-radius: 4px;
+    padding:1.5vh;
+}
+
+.atributo{
+    font-weight: bold;
+    font-style: italic;
+    font-size: larger;
+    color:rgb(224, 219, 219);
+
+
+}
+
+.valor-atributo{
+    color:rgb(88, 227, 227);
+    font-size: larger;
+    
+}
+
+#div-modelo{
+    width: 35vw;
+    margin: 1vw;
+
+    border: 2px solid #ffffff; /* Establece un borde blanco */
+    border-radius: 4px;
+    padding:4.5vh;
+}
+
+
+#input-name, #input-password,#input-nombre,#input-cilindrada,#input-tipo,#input-potencia,#input-peso,#input-id-marca,#input-nombre-marca,#input-origen,#input-año,#input-cant-empleados,#input-prod-anual,#input-fact-anual{
+    border-radius: 4px;
+    margin: 1px;
+    padding:1.5vh;
+    border: none;
+    background-color: transparent;
+    border: 2px solid #ffffff; /* Establece un borde blanco */
+    border-radius: 4px;
+    padding:1.5vh;
+    color:white;
+}
+
+#option-marca{
+    color:black;
+    font-size: larger;
+}
+
+#div-contenedor-modelos{
+
+    display: flex;
+    flex-flow: row wrap;
+
+}
+
+.div-marca{
+    width: 25vw;
+    margin:1vw;
+
+    border: 2px solid #ffffff; /* Establece un borde blanco */
+    border-radius: 4px;
+    padding:4.5vh;
+}
+
+.mensaje{
+    color:#4e948e;
+    font-size: larger;
+    display: block;
+    margin: 3%;
+    
+}
+
+.img-about{
+    position: absolute;
+    border: #061716 solid 4px;
+    border-radius: 10%;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
+    width: 50vw;
+}
+.div-about{
+    
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    font-size: 3.4vh;
+    font-style: italic;
+    color: rgb(199, 201, 199);
+}

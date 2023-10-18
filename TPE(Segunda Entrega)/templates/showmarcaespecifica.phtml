@@ -1,0 +1,35 @@
+<?php require ("templates/cabecera.phtml")?>
+<?php require ("templates/barra.phtml")?>
+
+
+   <div id=div-contenedor-modelos>
+           
+           <div id=div-modelo>
+               <span class="atributo">Nombre: </span >
+               <span class="valor-atributo"><?= $marca->nombre ?></span><br>
+               <hr>
+               <span class="atributo">Origen:</span> 
+               <span class="valor-atributo"><?= $marca->origen ?></span><br>
+               <hr>
+               <span class="atributo">Año Fundacion:</span>
+               <span class="valor-atributo"><?= $marca->año_fundacion ?></span><br>
+               <hr>
+               <span class="atributo">Cantidad de Empleados:</span> 
+               <span class="valor-atributo"><?= $marca->cant_empleados ?></span><br>
+               <hr>
+               <span class="atributo">Produccion Anual:</span>
+               <span class="valor-atributo"><?= $marca->produccion_anual ?></span><br>
+               <hr>
+               <span class="atributo">facturacion Anual: </span> 
+               <span class="valor-atributo"><?= $marca->facturacion_M_USD?></span><br>
+               <br>
+               <?php if (!empty($_SESSION['MAIL'])) : ?>
+                
+                    <a href='modificarmarca/<?= $marca->id?>' type='button' class='btn-modif' >Modificar</a>
+                    <a href='borrarmarca/<?= $marca->id?>' type='button' class='btn-borrar'>Borrar </a> 
+                <?php endif ?>
+                    <a href='modelosmarca/<?= $marca->id?>' type='button' class='btn-mostrar'>Mostrar Modelos de la Marca </a> 
+                
+                </div>
+           
+    </div>

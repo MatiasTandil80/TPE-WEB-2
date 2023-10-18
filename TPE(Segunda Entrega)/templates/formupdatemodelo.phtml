@@ -1,0 +1,17 @@
+<?php require ("templates/cabecera.phtml")?>
+<?php require ("templates/barra.phtml")?>
+
+<form action="form-update-modelos/<?= $modelo->id ?>" method="post" id="form-carga-modelos">
+      <label for="">Nombre:</label>
+      <input type="text" name="nombre"  value="<?= $modelo->nombre ?>" id="input-nombre">
+      Cilindrada cm3:
+      <input type="number" name="cilindrada_cm3" value="<?= $modelo->cilindrada_cm3 ?>" id="input-cilindrada">
+      Tipo:
+      <input type="text" name="tipo" value="<?= $modelo->tipo ?>" id="input-tipo">
+      Potencia hp:
+      <input type="number" name="potencia_hp" value="<?= $modelo->potencia_hp ?>" id="input-potencia">
+      Peso kg:
+      <input type="number" name="peso_kg" value="<?= $modelo->peso_kg ?>" id="input-peso">
+      
+      <input type="submit" value="Modificar Modelo" id="btn-modelos">
+</form>

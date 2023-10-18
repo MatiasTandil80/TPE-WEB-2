@@ -1,0 +1,17 @@
+<?php require ("templates/cabecera.phtml")?>
+<?php require ("templates/barra.phtml")?>
+    
+        <div id=div-contenedor-modelos >
+            
+            <?php foreach ($marcas as $marca):?>
+                <div class=div-marca >
+                   <span class="atributo">Marca: </span> 
+                   <span class="valor-atributo"><?= $marca->nombre ?> </span> 
+                   <a href='especificarmarca/<?= $marca->id ?>' type="button" class="a-mostrar">Ver Detalle</a>
+                </div>
+            <?php endforeach; ?>
+                       
+        </div>
+        <?php if (!empty($_SESSION['MAIL'])) : ?>
+                    <a href='añadirmarca' type='button' class="btn-agregar">Agregar Marca </a>
+        <?php endif ?>

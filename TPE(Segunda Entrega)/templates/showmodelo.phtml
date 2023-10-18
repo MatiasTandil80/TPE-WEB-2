@@ -1,0 +1,31 @@
+<?php require ("templates/cabecera.phtml")?>
+<?php require ("templates/barra.phtml")?>
+
+        <div id=div-contenedor-modelos>
+           
+                <div id="div-modelo">
+                    <span class="atributo">Nombre: </span > 
+                    <span class="valor-atributo"><?= $modelo->nombre?></span><br>
+                    <hr>
+                    <span class="atributo">Cilindrada: </span > 
+                    <span class="valor-atributo"><?= $modelo->cilindrada_cm3?></span><br>
+                    <hr>
+                    <span class="atributo">Tipo: </span > 
+                    <span class="valor-atributo"><?= $modelo->tipo?></span><br>
+                    <hr>
+                    <span class="atributo">Potencia: </span > 
+                    <span class="valor-atributo"><?= $modelo->potencia_hp?></span><br>
+                    <hr>
+                    <span class="atributo">Peso: </span >
+                    <span class="valor-atributo"><?= $modelo->peso_kg?></span><br>
+                    <hr>
+                    <span class="atributo">Marca: </span >
+                    <span class="valor-atributo"><?= $modelo->nombre_marca ?></span><br>
+                    <br>
+                    <?php if (!empty($_SESSION['MAIL'])) : ?>
+                        <a href='modificar/<?= $modelo->id?>' type='button' class='btn-modif' >Modificar</a>
+                        <a href='borrarModelo/<?= $modelo->id?>' type='button' class='btn-borrar'>Borrar </a> 
+                    <?php endif ?>
+                </div>
+            
+        </div>

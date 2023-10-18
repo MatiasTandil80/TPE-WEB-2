@@ -1,0 +1,37 @@
+<?php require ("templates/cabecera.phtml")?>
+<?php require ("templates/barra.phtml")?>
+
+
+<form action="form-add-modelo" method="post" id="form-carga-modelos">
+      
+      <?php if(isset($lista_marcas)):?>
+        <label for="id_marca">Marca:</label>
+            <select name="id_marca"  id="input-id-marca">
+              <option value="" disabled selected>Elija una Marca</option>
+              <?php foreach($lista_marcas as $marca):?>
+                  <option id="option-marca" value="<?= $marca->id?>"><?= $marca->nombre?></option>
+              <?php endforeach; ?>
+            </select>
+      <?php else: ?>
+       
+        <input type="hidden" name="id_marca"  value="<?=$id_marca?>" id="input-id-marca" readonly>
+      
+      <?php endif; ?>         
+
+      <label for="nombre">Nombre:</label>
+      <input type="text" name="nombre"  value="" id="input-nombre">
+      
+      <label for="cilindrada_cm3">Cilindrada cm3:</label>
+      <input type="number" name="cilindrada_cm3" value="" id="input-cilindrada">
+      
+      <label for="tipo">Tipo:</label>
+      <input type="text" name="tipo" value="" id="input-tipo">
+      
+      <label for="potencia_hp">Potencia hp:</label>
+      <input type="number" name="potencia_hp" value="" id="input-potencia">
+      
+      <label for="peso_kg">Peso kg:</label>
+      <input type="number" name="peso_kg" value="" id="input-peso">
+      
+      <input type="submit" value="Añadir Modelo" id="btn-modelos">
+    </form>

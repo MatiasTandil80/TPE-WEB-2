@@ -1,0 +1,12 @@
+<?php require ("templates/cabecera.phtml")?>
+<?php require ("templates/barra.phtml")?>
+
+      <form action="administrador" method="post" id="form-login">
+              <input type="text" name="mail" placeholder="Nombre de usuario" id="input-name">
+              <input type="text" name="password" placeholder="Contraseña" id="input-password">
+              <input type="submit" value="Iniciar sesión" id="btn-login">
+      </form>
+
+        <?php if (isset($error)) : ?>
+                <div id="login-invalido"><?= $error ?></div>
+        <?php endif ?>

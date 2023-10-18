@@ -1,0 +1,20 @@
+<?php require ("templates/cabecera.phtml")?>
+<?php require ("templates/barra.phtml")?>
+
+        <div id="div-contenedor-modelos">
+            <?php foreach ($modelos as $modelo) :?>
+                <div id="div-modelo">
+                    <span class="atributo">Nombre: </span> 
+                    <span class="valor-atributo"><?= $modelo->nombre ?> </span>
+                    <a href='especificarmodelo/<?= $modelo->id ?>' class="a-mostrar">Ver detalle </a>
+                </div>
+            <?php endforeach; ?>
+        </div>
+
+        <?php if (!empty($_SESSION['MAIL'])) : ?>
+            <?php if($id_marca == null): ?>
+                <a href='addModelo' class='btn-agregar'>Añadir Modelo</a>
+            <?php else: ?>
+                <a href='addmodelodesdemarca/<?= $id_marca?>' class='btn-agregar'>Añadir Modelo desde Marca</a>
+            <?php endif ?>
+        <?php endif ?>
